@@ -5,6 +5,6 @@
 echo "post-start start"
 echo "$(date +'%Y-%m-%d %H:%M:%S')    post-start start" >> "$HOME/status"
 
-tailscale up --accept-routes --advertise-exit-node --auth-key
+sudo tailscale up --accept-routes --advertise-exit-node --auth-key $TS_AUTH_KEY
 echo "post-start complete"
 echo "$(date +'%Y-%m-%d %H:%M:%S')    post-start complete" >> "$HOME/status"
