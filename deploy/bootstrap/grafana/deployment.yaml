@@ -9,7 +9,7 @@ data:
     admin_user = $__file{/etc/config/secrets/username}
     admin_password = $__file{/etc/config/secrets/password}
     [dashboards]
-    default_home_dashboard_path = "/var/lib/grafana/dashboards/imdb/imdb.json"
+    default_home_dashboard_path = "/var/lib/grafana/dashboards/k3s/k3s.json"
 
 ---
 
@@ -21,7 +21,7 @@ metadata:
 type: Opaque
 data:
   username: YWRtaW4=
-  password: Y3NlLWxhYnM=
+  password: YWRtaW4=
 
 ---
 
@@ -68,10 +68,8 @@ spec:
           - name: grafana-dashboard-provider
             mountPath: /etc/grafana/provisioning/dashboards/dashboardProvider.yaml
             subPath: dashboardProvider.yaml
-          - name: dashboards-imdb
-            mountPath: /var/lib/grafana/dashboards/imdb
-          - name: dashboards-dotnet
-            mountPath: /var/lib/grafana/dashboards/dotnet
+          - name: dashboards-k3s
+            mountPath: /var/lib/grafana/dashboards/k3s
       volumes:
         - name: grafana-secrets
           secret:
@@ -89,12 +87,9 @@ spec:
         - name: grafana-dashboard-provider
           configMap:
             name: grafana-dashboard-provider
-        - name: dashboards-imdb
+        - name: dashboards-k3s
           configMap:
             name: grafana-dashboards-imdb
-        - name: dashboards-dotnet
-          configMap:
-            name: grafana-dashboards-dotnet
 
 ---
 
