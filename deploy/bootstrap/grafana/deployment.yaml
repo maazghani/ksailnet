@@ -89,7 +89,7 @@ spec:
             name: grafana-dashboard-provider
         - name: dashboards-k3s
           configMap:
-            name: grafana-dashboards-imdb
+            name: grafana-dashboards-k3s
 
 ---
 
