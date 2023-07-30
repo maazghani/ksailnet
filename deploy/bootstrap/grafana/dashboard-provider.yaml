@@ -10,15 +10,9 @@ data:
   dashboardProvider.yaml: |
     apiVersion: 1
     providers:
-    - name: imdb
+    - name: k3s
       options:
-        path: /var/lib/grafana/dashboards/imdb
-      orgId: 1
-      type: file
-      disableDeletion: false
-    - name: dotnet
-      options:
-        path: /var/lib/grafana/dashboards/dotnet
+        path: /var/lib/grafana/dashboards/k3s
       orgId: 1
       type: file
       disableDeletion: false
