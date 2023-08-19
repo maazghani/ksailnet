@@ -1,0 +1,3 @@
+[submodule "clickhouse-operator"]
+	path = clickhouse-operator
+	url = https://github.com/altinity/clickhouse-operator
