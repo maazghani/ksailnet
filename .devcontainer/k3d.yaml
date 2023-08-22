@@ -1,6 +1,7 @@
-apiVersion: k3d.io/v1alpha2
+apiVersion: k3d.io/v1alpha5
 kind: Simple
 servers: 1
+agents: 3
 network: k3d
 kubeAPI:
   hostIP: "0.0.0.0"
@@ -8,32 +9,49 @@ kubeAPI:
 volumes:
   - volume: /prometheus:/prometheus
     nodeFilters:
-      - server[0]
+      - server:*
+      - agent:*
   - volume: /grafana:/grafana
     nodeFilters:
-      - server[0]
+      - server:*
+      - agent:*
 ports:
   - port: 30000:30000
     nodeFilters:
-      - server[0]
+      - server:0
+      - agent:*
   - port: 30080:30080
     nodeFilters:
-      - server[0]
+      - server:0
+      - agent:*
   - port: 31080:31080
     nodeFilters:
-      - server[0]
+      - server:0
+      - agent:*
   - port: 32000:32000
     nodeFilters:
-      - server[0]
+      - server:0
+      - agent:*
 
 options:
   k3d:
     wait: true
     timeout: "60s"
   k3s:
-    extraServerArgs:
-      - --tls-san=127.0.0.1
-    extraAgentArgs: []
+    extraArgs:
+      - arg: --tls-san=127.0.0.1
+        nodeFilters:
+          - server:*
+    nodeLabels:
+      - label: topology.kubernetes.io/zone=zone-a
+        nodeFilters:
+          - agent:0
+      - label: topology.kubernetes.io/zone=zone-b
+        nodeFilters:
+          - agent:1
+      - label: topology.kubernetes.io/zone=zone-c
+        nodeFilters:
+          - agent:2
   kubeconfig:
     updateDefaultKubeconfig: true
     switchCurrentContext: true
