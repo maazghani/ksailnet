@@ -7,6 +7,14 @@ short: Kubernetes in Codespaces CLI
 long: "Kubernetes in Codespaces CLI\n\n  A dynamic CLI for automating many Kubernetes development tasks"
 
 commands:
+  - name: make
+    short: make cluster
+
+    scriptCommands:
+    - name: cluster
+      short: Build the IMDb app
+      path: make/cluster
+
   - name: build
     short: Build local apps
 
@@ -18,3 +26,5 @@ commands:
     - name: webv
       short: Build WebValidate
       path: build/webv
+    
+

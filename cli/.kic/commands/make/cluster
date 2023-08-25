@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# validate directories
+if [ ! -f "$REPO_BASE/.devcontainer/k3d.yaml" ]
+then
+        echo "File not found - \"$REPO_BASE\"/.devcontainer/k3d.yaml"
+        exit 1
+fi
+
+kic cluster delete
+
+echo ""
+echo "Creating cluster ..."
+
+k3d cluster create \
+    --registry-create k3d-registry.localhost:0.0.0.0:5500 \
+    --config "$REPO_BASE/.devcontainer/k3d.yaml" \
+    --network k3d \
+    --wait false

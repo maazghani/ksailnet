@@ -4,16 +4,16 @@ servers: 1
 agents: 3
 network: k3d
 kubeAPI:
-  hostIP: "0.0.0.0"
+  hostIP: 0.0.0.0
   hostPort: "6443"
 volumes:
   - volume: /prometheus:/prometheus
     nodeFilters:
-      - server:*
+      - server:0
       - agent:*
   - volume: /grafana:/grafana
     nodeFilters:
-      - server:*
+      - server:0
       - agent:*
 ports:
   - port: 30000:30000
@@ -35,13 +35,16 @@ ports:
 
 options:
   k3d:
-    wait: true
+    wait: false
     timeout: "60s"
   k3s:
     extraArgs:
       - arg: --tls-san=127.0.0.1
         nodeFilters:
-          - server:*
+          - server:0
+      - arg: --no-deploy=traefik
+        nodeFilters:
+          - server:0
     nodeLabels:
       - label: topology.kubernetes.io/zone=zone-a
         nodeFilters:
