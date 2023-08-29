@@ -4,6 +4,7 @@
 # ksailnet
 # k3s running in a tailscaled codespace with grafana/prom
 
+_Yes I also had ChatGPT write my readme for me, deal with it_
 
 ## Inner Loop Development
 
@@ -87,7 +88,7 @@ The `kic` CLI tool, found in the `cli` directory, offers various functionalities
 
 You can access the Grafana dashboard by clicking on the forwarded Grafana port in your development environment. Once the Grafana login page appears, use the default credentials `admin:admin` to log in. The default dashboard can be filtered to focus on a specific namespace or your particular deployment.
 
-_Yes I also had ChatGPT write my readme for me, deal with it_
+
 
 ## Appendix
 
