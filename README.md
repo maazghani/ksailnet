@@ -6,6 +6,8 @@
 
 _Yes I also had ChatGPT write my readme for me, deal with it_
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/maazghani/ksailnet?quickstart=1)
+
 ## Inner Loop Development
 
 
