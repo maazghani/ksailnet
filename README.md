@@ -12,6 +12,10 @@ _Yes I also had ChatGPT write my readme for me, deal with it_
 
 [![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visual-studio-code)](vscode://vscode.git/clone?url=https://github.com/maazghani/ksailnet)
 
+<html>
+<img src="screen-2.jpeg" width="600" height="400"/>
+</html>
+
 ## Inner Loop Development (where real development happen)
 
 
@@ -63,6 +67,11 @@ This streamlined approach ensures that developers can focus more on coding and l
 ## Accessing Grafana Dashboard
 
 You can access the Grafana dashboard by clicking on the forwarded Grafana port in your development environment. Once the Grafana login page appears, use the default credentials `admin:admin` to log in. The default dashboard can be filtered to focus on a specific namespace or your particular deployment.
+<html>
+<img src="screen-1.jpeg" width="600" height="400"/>
+</html>
+
+
 
 
 
@@ -135,4 +144,3 @@ This approach offers a hands-on way to understand and demonstrate complex Kubern
 ##
 ## k9s + zsh + vscode
 
-![screen2](screen-2.jpeg)
