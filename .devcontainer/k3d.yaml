@@ -1,6 +1,7 @@
 apiVersion: k3d.io/v1alpha2
 kind: Simple
-servers: 3
+servers: 1
+agents: 3
 network: k3d
 kubeAPI:
   hostIP: "0.0.0.0"
@@ -8,10 +9,12 @@ kubeAPI:
 volumes:
   - volume: /prometheus:/prometheus
     nodeFilters:
-      - server[0]
+    - server[0]
+    - all
   - volume: /grafana:/grafana
     nodeFilters:
-      - server[0]
+    - server[0]
+    - all
 ports:
   - port: 30000:30000
     nodeFilters:
