@@ -22,7 +22,7 @@ _Yes I also had ChatGPT write my readme for me, deal with it_
 ## Inner Loop Development
 
 
-ksailnet is engineered to optimize Inner Loop Developßßßment in a cloud-native ecosystem. It addresses several key aspects to enhance developer productivity:
+ksailnet is engineered to optimize Inner Loop Development in a cloud-native ecosystem. It addresses several key aspects to enhance developer productivity:
 
 - **Pre-configured Environment**: The `.devcontainer` setup automates the provisioning of a development environment, eliminating the need for manual configuration.
 
@@ -143,7 +143,4 @@ Jupyter Notebooks are interactive web documents that contain both code cells and
 This approach offers a hands-on way to understand and demonstrate complex Kubernetes configurations and their behavior under different conditions.
 
 </detail>
-
-##
-## k9s + zsh + vscode
 
