@@ -9,12 +9,19 @@ kubeAPI:
 volumes:
   - volume: /prometheus:/prometheus
     nodeFilters:
-    - server[0]
     - all
   - volume: /grafana:/grafana
     nodeFilters:
-    - server[0]
     - all
+  - volume: /kafka/0:/kafka
+    nodeFilters:
+    - agent:0
+  - volume: /kafka/1:/kafka
+    nodeFilters:
+    - agent:1
+  - volume: /kafka/2:/kafka
+    nodeFilters:
+    - agent:2
 ports:
   - port: 30000:30000
     nodeFilters:
