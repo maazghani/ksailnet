@@ -9,11 +9,9 @@
 # ksailnet
 # k3s running in vscode with monitoring (grafana/prom) 
 
-_Yes I also had ChatGPT write my readme for me, deal with it_
-
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/maazghani/ksailnet)
 
-[![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visual-studio-code)](vscode://vscode.git/clone?url=https://github.com/maazghani/ksailnet)
+![Open in VS Code](vscode://vscode.git/clone?url=https://github.com/maazghani/ksailnet)
 
 <html>
 <img src="screen-2.jpeg" width="600" height="400"/>
