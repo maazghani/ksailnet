@@ -11,7 +11,7 @@
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/maazghani/ksailnet)
 
-[Open in VS Code](vscode://vscode.git/clone?url=https://github.com/maazghani/ksailnet)
+![Open in VS Code](vscode://vscode.git/clone?url=https://github.com/maazghani/ksailnet)
 
 <html>
 <img src="screen-2.jpeg" width="600" height="400"/>
