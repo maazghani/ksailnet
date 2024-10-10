@@ -42,7 +42,7 @@
   ],
   "features": {
     "ghcr.io/tailscale/codespace/tailscale:1": {},
-    "ghcr.io/devcontainers/features/sshd:1": {}
+    "ghcr.io/devcontainers/features/sshd:latest": {}
   },
   "waitFor": "postCreateCommand",
   "onCreateCommand": "/bin/bash -c .devcontainer/on-create.sh",
