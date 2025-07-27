@@ -41,8 +41,7 @@
     "timonwong.shellcheck"
   ],
   "features": {
-    "ghcr.io/tailscale/codespace/tailscale:1": {},
-    "ghcr.io/devcontainers/features/sshd:latest": {}
+    "ghcr.io/tailscale/codespace/tailscale:1": {}
   },
   "waitFor": "postCreateCommand",
   "onCreateCommand": "/bin/bash -c .devcontainer/on-create.sh",

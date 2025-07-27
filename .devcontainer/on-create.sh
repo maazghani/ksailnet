@@ -36,6 +36,8 @@ docker network connect k3d k3d-registry.localhost
 echo "generating completions"
 kic completion zsh > "$HOME/.oh-my-zsh/completions/_kic"
 kubectl completion zsh > "$HOME/.oh-my-zsh/completions/_kubectl"
+# add kubectl aliases to zshrc
+cat "$REPO_BASE/.devcontainer/aliases" >> "$HOME/.oh-my-zsh/oh-my-zsh.sh"
 
 echo "creating k3d cluster"
 kic cluster rebuild
