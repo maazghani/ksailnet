@@ -1,4 +1,4 @@
-FROM ghcr.io/cse-labs/k3d:latest
+FROM ghcr.io/cse-labs/k3d@sha256:86b1e13d1619b0b0b5ce4e94f7cc553ea504f559c31c52e396733a3a9918f247
 
 # some images require specific values
 ARG USERNAME=vscode
